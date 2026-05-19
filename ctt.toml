@@ -1,0 +1,5 @@
+[defaults]
+_post_tasks = [
+  "uvx prek",
+  "uvx pytest",
+]

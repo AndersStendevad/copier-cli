@@ -1,0 +1,7 @@
+[[repos]]
+repo = "https://github.com/KyleKing/copier-template-tester"
+rev = "2.4.0b0"
+hooks = [
+  { id = "copier-template-tester" },
+]
+
