@@ -1,0 +1,34 @@
+package_name:
+  type: str
+  help: The human readable name of the package.
+  default: "My Project"
+
+slug_name:
+  type: str
+  help: The slugify version of the package name.
+  default: "{{ package_name.split(' ') | join('-') |  lower }}"
+
+package_abbreviation:
+  type: str
+  help: The name of the package abbreviated to a few characters. Used in the CLI.
+  default: "{{ slug_name.split('-') | map('first') | join('') }}" 
+
+author:
+  type: str
+  help: The author of the package.
+  default: "Anders Stendevad"
+
+email:
+  type: str
+  help: The email of the author
+  default: "{{ author.split(' ') | join('.') }}@example.com"
+
+description:
+  type: str
+  help: A brief description of the package.
+  default: "{{ package_name }}, a project in Python with a CLI"
+
+year:
+  type: int
+  help: The year the package was created.
+  default: "2026"
